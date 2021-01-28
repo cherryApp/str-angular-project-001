@@ -7,11 +7,24 @@ import { Product } from '../model/product';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  @Input() product:Product[] = new Product();
+  @Input() products: Product[] = [];
+  @Input() phraseString: string = '';
+
+  currentProduct: Product = new Product();
+
+  columnKey: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-}
+  onSelectProduct(product: Product): void {
+    this.currentProduct = product;
+  }
 
+
+  onClumnSelect(key: string): void {
+    this.columnKey = key;
+  }
+}

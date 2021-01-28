@@ -1,9 +1,40 @@
-<p>{{ product?.id }}</p>
-<p>{{ product?.catId }}</p>
-<p>{{ product?.name }}</p>
-<p>{{ product?.description }}</p>
-<p>{{ product?.price }}</p>
-<p>{{ product?.stock }}</p>
-<p>{{ product?.featured }}</p>
-<p>{{ product?.active }}</p>
-
+<div class="row">
+    <div class="col-8">
+      <h3>Products</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>            
+            <th (click)="onColumnSelect('id')">id</th>
+            <th (click)="onColumnSelect('catId')">catId</th>
+            <th (click)="onColumnSelect('name')">name</th>
+            <th (click)="onColumnSelect('description')">description</th>
+            <th (click)="onColumnSelect('price')">price</th>
+            <th (click)="onColumnSelect('stock')">stock</th>
+            <th (click)="onColumnSelect('featured')">featured</th>
+            <th (click)="onColumnSelect('active')">active</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr *ngFor="let user of users| filter:phraseString:'name' | sorter:columnKey">
+            <td>{{ product?.id }}</td>
+            <td>{{ product?.catId }}</td>
+            <td>{{ product?.name }}</td>
+            <td>{{ product?.description }}</td>
+            <td>{{ product?.price }}</td>
+            <td>{{ product?.stock }}</td>
+            <td>{{ product?.featured }}</td>
+            <td>{{ product?.active }}</td>
+            <td>
+              <button (click)="onSelectProduct(product)" class="btn btn-info">
+                <i class="fa fa-eye"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4 pt-5">
+      <app-product-list [product]="currentProduct"></app-product-list>
+    </div>
+  </div>
