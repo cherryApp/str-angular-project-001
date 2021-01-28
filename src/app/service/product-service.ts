@@ -4,7 +4,7 @@ import { Product } from '../model/product';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceService {
+export class ProductService {
 list: Product[] = 
 [{"id":1,"catId":2,"name":"hgadie0","description":"amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim","image":"http://dummyimage.com/100x150.png/ff4444/ffffff","price":8528,"stock":"Technology","featured":true,"active":true},
 {"id":2,"catId":2,"name":"scolcutt1","description":"mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi","image":"http://dummyimage.com/100x150.png/5fa2dd/ffffff","price":8088,"stock":"n/a","featured":true,"active":false},
