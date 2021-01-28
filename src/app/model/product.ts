@@ -3,7 +3,7 @@ export class Product {
     catId:number=0;
     name:string='';
     description:string='';
-    image:ImageBitmap;
+    image:string='';
     price:number=0;
     stock:string='';
     featured:boolean=true;
@@ -15,7 +15,7 @@ export class Product {
    this.catId=properties.catId || 0;
    this.name=properties.name || '' ;
    this.description = properties.description || '';
-   this.image=properties.image;
+   this.image=properties.image || '';
    this.price=properties.price || 0;
    this.stock=properties.stock || '';
    this.featured=properties.featured || true;
