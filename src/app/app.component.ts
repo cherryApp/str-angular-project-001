@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product} from './model/product';
+import { Product } from './model/product';
 import { ProductService } from './service/product.service';
 
 
@@ -11,9 +11,5 @@ import { ProductService } from './service/product.service';
 export class AppComponent {
 
   title = 'str-angular-project001';
-  productList: Product[] = this.productService.list;
-  constructor (private productService: ProductService) {}
-    
-  
-  
+
 }
