@@ -11,11 +11,7 @@ import { ProductService } from './service/product.service';
 export class AppComponent {
 
   title = 'str-angular-project001';
-<<<<<<< HEAD
-
-=======
  
   
   
->>>>>>> origin/dev
 }
