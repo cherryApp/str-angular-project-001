@@ -1,16 +1,14 @@
-<div class="container-fluid">
-  <h1>Kategória termékek</h1>
-  <div class="row">
-      <div class="col-12 col-md-4 lg-2">
-          <!-- *ngFor="let product of products"> -->
-          <app-product-card [product]="productList[0]"></app-product-card>
-          <app-product-card [product]="productList[1]"></app-product-card>
-          <app-product-card [product]="productList[2]"></app-product-card>
-          <app-product-card [product]="productList[3]"></app-product-card>
-          <app-product-card [product]="productList[4]"></app-product-card>
-          <app-product-card [product]="productList[5]"></app-product-card>
-          <app-product-card [product]="productList[6]"></app-product-card>
-      </div>
-
+<form class="form-inline my-2 my-lg-0">
+  <input (keyup)="onChangePhrase($event)" [(ngModel)]="phraseString" class="form-control mr-sm-2" type="text" placeholder="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<div class="row" *ngIf="kategoria1">
+  <div class="col-md-6 col-lg-3" *ngFor="let product of kategoria1List | filter:phraseString">
+      <app-product-card [product]="product"></app-product-card>
+  </div>
+</div>
+<div class="row" *ngIf="kategoria2">
+  <div class="col-md-6 col-lg-3" *ngFor="let product of kategoria2List | filter:phraseString">
+      <app-product-card [product]="product"></app-product-card>
   </div>
 </div>
