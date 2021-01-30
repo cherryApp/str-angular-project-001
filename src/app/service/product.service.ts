@@ -112,7 +112,7 @@ export class ProductService {
     const array: any = method(id);
     if (array)
       array.map(item => item.image = "/src/assets/img/" + item.image);
-    return
+    return array;
   }
 
 }
