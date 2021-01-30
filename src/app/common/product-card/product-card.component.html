@@ -1,9 +1,31 @@
-<div *ngFor="let productCard of products">
 
-    <p>{{productCard.author}}</p>
-    <p>{{productCard.title}}</p>
-    <p>{{productCard.price}}</p>
-    <p>{{productCard.description}}</p>
+
+    
+<section id="cardSection" class="py-5">
+<div class="container">
+  <div id="juli" class="col-md-5 card flex-row shadow-sm" style="width: 100rem">
+    <div id="picture" class="col-4">
+
+      <img src="../assets/img/01.jpg" class="card-img-top " alt="book">
+    </div>
+      <div class="col-7 card-body text-center">
+        <h5 class="card-title mb-5 text-center">                 
+          <p class="card-text"><small>{{product.author}}</small></p>
+          <p>{{product.title}}</p>
+        </h5>
+        <div class="card-body text-center description">
+            <p>{{product.description}}</p>
+        </div>
+        <div class="card-body text-center flex-flow">
+            <p>Ár: {{product.price}} Ft</p>
+        </div>
+        
+        <div class="card-body text-center">
+          <a href="#" class="card-link"><strong>Kosárba</strong></a>
+          
+        </div>
+      </div>
+    </div>
+
 </div>
-
-
+</section>
