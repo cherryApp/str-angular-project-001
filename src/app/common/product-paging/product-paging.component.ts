@@ -1,6 +1,7 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { ProductCard } from '../product-card';
+import { Product } from 'src/app/model/product';
+
 
 @Component({
   selector: 'app-product-paging',
@@ -9,8 +10,7 @@ import { ProductCard } from '../product-card';
 })
 export class ProductPagingComponent implements OnInit {
 
-  @Input() actionCards: number[] = [1, 2, 3, 4, 5];
-  productCard: ProductCard = new ProductCard();
+  @Input() product: Product;
 
 
   constructor() { }
