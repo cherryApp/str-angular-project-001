@@ -8,11 +8,7 @@ import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
-<<<<<<< HEAD
-import { ProductPagingComponent } from './common/product-paging/product-paging.component';
-=======
 import { ProductListComponent } from './common/product-list/product-list.component';
->>>>>>> origin/dev
 
 
 @NgModule({
@@ -23,13 +19,8 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     Cat02Component,
     HomeComponent,
     ProductCardComponent,
-<<<<<<< HEAD
-    ProductPagingComponent,
-   
-=======
     ProductListComponent,
 
->>>>>>> origin/dev
   ],
   imports: [
     BrowserModule,
