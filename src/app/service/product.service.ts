@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { ProductCard } from '../common/product-card';
 import { Product } from '../model/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  // catId: number;
   list: Product[] = [
     { id: 1, catId: 4, title: "Stay", author: "Raynor Besson", description: "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.", image: "1.png", price: 8239, stock: 7, featured: true, active: true, action: true },
     { id: 2, catId: 5, title: "Stratton Story, The", author: "Harv Beardwood", description: "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.", image: "2.png", price: 6420, stock: 4, featured: true, active: true, action: true },
@@ -63,4 +65,29 @@ export class ProductService {
     { id: 55, catId: 5, title: "Young Cassidy", author: "Lynna Gronaver", description: "Aenean fermentum. Donec ut mauris eget massa tempor convallis.", image: "55.png", price: 6001, stock: 7, featured: false, active: true, action: false }]
 
   constructor() { }
+
+  topFiveFeaturedProducts: Product[] = this.list.filter(product => product.featured)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
+
+  topFiveProductsInCategory(catId: number): Product[] {
+
+    return this.list.filter(product => product.catId == catId)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 5);
+  }
+
+  getCard(id: number): ProductCard {
+    const myProduct = this.list.find(item => item.id == id);
+    const myCard = new ProductCard();
+    myCard.id = myProduct.id;
+    myCard.author = myProduct.author;
+    myCard.title = myProduct.title;
+    myCard.description = myProduct.description;
+    myCard.price = myProduct.price;
+    myCard.stock = myProduct.stock;
+
+    return myCard;
+  }
+
 }
