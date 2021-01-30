@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../model/product';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
+import { ProductCardComponent } from 'src/app/common/product-card/product-card.component';
+
 
 @Component({
   selector: 'app-product-list',
@@ -8,23 +11,17 @@ import { Product } from '../model/product';
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[] = [];
+  @Input() kategoria1:Product[];
   @Input() phraseString: string = '';
+  
 
-  currentProduct: Product = new Product();
+  productList: Product[] = this.productService.list;  
 
-  columnKey: string = '';
-
-  constructor() { }
+  constructor(
+    private productService: ProductService,    
+  ) { }
 
   ngOnInit(): void {
   }
-
-  onSelectProduct(product: Product): void {
-    this.currentProduct = product;
-  }
-
-
-  onClumnSelect(key: string): void {
-    this.columnKey = key;
-  }
+    
 }

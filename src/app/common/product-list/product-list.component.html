@@ -1,40 +1,16 @@
-<div class="row">
-    <div class="col-8">
-      <h3>Products</h3>
-      <table class="table table-striped">
-        <thead>
-          <tr>            
-            <th (click)="onColumnSelect('id')">id</th>
-            <th (click)="onColumnSelect('catId')">catId</th>
-            <th (click)="onColumnSelect('name')">name</th>
-            <th (click)="onColumnSelect('description')">description</th>
-            <th (click)="onColumnSelect('price')">price</th>
-            <th (click)="onColumnSelect('stock')">stock</th>
-            <th (click)="onColumnSelect('featured')">featured</th>
-            <th (click)="onColumnSelect('active')">active</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          <tr *ngFor="let user of users| filter:phraseString:'name' | sorter:columnKey">
-            <td>{{ product?.id }}</td>
-            <td>{{ product?.catId }}</td>
-            <td>{{ product?.name }}</td>
-            <td>{{ product?.description }}</td>
-            <td>{{ product?.price }}</td>
-            <td>{{ product?.stock }}</td>
-            <td>{{ product?.featured }}</td>
-            <td>{{ product?.active }}</td>
-            <td>
-              <button (click)="onSelectProduct(product)" class="btn btn-info">
-                <i class="fa fa-eye"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-4 pt-5">
-      <app-product-list [product]="currentProduct"></app-product-list>
-    </div>
+<div class="container-fluid">
+  <h1>Kategória termékek</h1>
+  <div class="row">
+      <div class="col-12 col-md-4 lg-2">
+          <!-- *ngFor="let product of products"> -->
+          <app-product-card [product]="productList[0]"></app-product-card>
+          <app-product-card [product]="productList[1]"></app-product-card>
+          <app-product-card [product]="productList[2]"></app-product-card>
+          <app-product-card [product]="productList[3]"></app-product-card>
+          <app-product-card [product]="productList[4]"></app-product-card>
+          <app-product-card [product]="productList[5]"></app-product-card>
+          <app-product-card [product]="productList[6]"></app-product-card>
+      </div>
+
   </div>
+</div>
