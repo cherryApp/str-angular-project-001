@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  product = this.productService.getCard(2);
+  product = this.productService.getCard(1);
   productList: Product[] = this.productService.list;
   constructor(private productService: ProductService) { }
 
