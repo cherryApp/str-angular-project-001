@@ -35,4 +35,9 @@ export class CategoryService {
   ]
 
   constructor() { }
+
+  getCategoryId(name: string): number {
+    const obj = this.list.find(item => item.name == name)
+    return obj ? obj.id : null;
+  }
 }
