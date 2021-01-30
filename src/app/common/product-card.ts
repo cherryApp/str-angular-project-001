@@ -2,7 +2,9 @@ import { AppComponent } from "../app.component";
 import { ProductService } from "../service/product.service";
 
 export class ProductCard {
+
          id: number;
+         image: string;
          author: string;
          title: string;
          description: string;
@@ -12,6 +14,7 @@ export class ProductCard {
  constructor(properties?: ProductCard) { 
      if(properties) {
          this.id = properties.id;
+         this.image = properties.image;
          this.author = properties.author;
          this.title = properties.title;
          this.description = properties.description;
