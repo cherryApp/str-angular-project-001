@@ -11,9 +11,7 @@ import { ProductService } from './service/product.service';
 export class AppComponent {
 
   title = 'str-angular-project001';
-  productList: Product[] = this.productService.list;
-  constructor (private productService: ProductService) {}
-    
+ 
   
   
 }
