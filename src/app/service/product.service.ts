@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../model/product';
-import { ProductCard } from '../common/product-card';
+import { ProductCardComponent } from '../common/product-card/product-card.component';
 
 @Injectable({
   providedIn: 'root'

@@ -1,1 +1,21 @@
-<p>home works!</p>
+<section id="cardSection" class="py-5">
+    <div class="container">
+      <div class="col-md-5 card flex-row">
+        <div>    
+          <img src= "{{product.image}}" alt="car">   
+        </div>
+          <div class="col-7 card-body text-center">
+            <h5 class="card-title mb-5 text-center">                 
+              <p>{{product.name}}</p>
+            </h5>
+            <div class="card-body text-center description">
+                <p>{{product.description}}</p>
+            </div>
+            <div class="card-body text-center flex-flow">
+                <p>Ár: {{product.price}} Ft</p>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+  
