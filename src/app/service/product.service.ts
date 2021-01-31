@@ -65,7 +65,7 @@ export class ProductService {
       description: "Integer ac neque. Duis bibendum. Aenean lectus. Pellentesque eget nunc.", image: "assets/img/14.jpg", price: 6018, stock: 8, featured: false, active: true, action: true
     },
     {
-      id: 15, catId: 3, title: "Sydney White", author: "North Colt",
+      id: 15, catId: 2, title: "Sydney White", author: "North Colt",
       description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", image: "assets/img/15.jpg", price: 9752, stock: 5, featured: false, active: true, action: true
     },
     {
@@ -113,7 +113,7 @@ export class ProductService {
       description: "Phasellus in felis. Donec semper sapien a libero.", image: "assets/img/26.jpg", price: 5297, stock: 4, featured: false, active: false, action: false
     },
     {
-      id: 27, catId: 3, title: "Living in Oblivion", author: "Carlyle Stilliard",
+      id: 27, catId: 2, title: "Living in Oblivion", author: "Carlyle Stilliard",
       description: "Pellentesque at nulla. Suspendisse potenti.", image: "assets/img/27.jpg", price: 5037, stock: 2, featured: true, active: false, action: false
     },
     {
@@ -149,7 +149,7 @@ export class ProductService {
       description: "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.", image: "assets/img/35.jpg", price: 2444, stock: 5, featured: true, active: true, action: false
     },
     {
-      id: 36, catId: 3, title: "Primal Fear", author: "Even Lagen",
+      id: 36, catId: 2, title: "Primal Fear", author: "Even Lagen",
       description: "Sed accumsan felis. Ut at dolor quis odio consequat varius.", image: "assets/img/36.jpg", price: 3227, stock: 0, featured: true, active: true, action: true
     },
     {
@@ -161,7 +161,7 @@ export class ProductService {
       description: "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.", image: "assets/img/38.jpg", price: 9621, stock: 2, featured: false, active: true, action: true
     },
     {
-      id: 39, catId: 3, title: "Don", author: "Bernelle Annon",
+      id: 39, catId: 2, title: "Don", author: "Bernelle Annon",
       description: "In hac habitasse platea dictumst. Integer tincidunt ante vel ipsum.", image: "assets/img/39.jpg", price: 2897, stock: 2, featured: true, active: false, action: false
     },
     {
@@ -169,7 +169,7 @@ export class ProductService {
       description: "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, nisl.", image: "assets/img/40.jpg", price: 6575, stock: 10, featured: false, active: false, action: true
     },
     {
-      id: 41, catId: 3, title: "Freedom Song", author: "Jacintha Lockhurst",
+      id: 41, catId: 2, title: "Freedom Song", author: "Jacintha Lockhurst",
       description: "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.", image: "assets/img/41.jpg", price: 4851, stock: 9, featured: false, active: true, action: true
     },
     {
@@ -181,7 +181,7 @@ export class ProductService {
       description: "Maecenas ut massa quis augue luctus tincidunt.", image: "assets/img/43.jpg", price: 3745, stock: 5, featured: false, active: true, action: false
     },
     {
-      id: 44, catId: 3, title: "Girl of Finland (Lapualaismorsian)", author: "Patrick Bickers",
+      id: 44, catId: 2, title: "Girl of Finland (Lapualaismorsian)", author: "Patrick Bickers",
       description: "Praesent blandit lacinia erat. Aliquam augue quam, consectetuer eget, rutrum at, lorem.", image: "assets/img/44.jpg", price: 8341, stock: 2, featured: false, active: false, action: false
     },
     {
@@ -189,7 +189,7 @@ export class ProductService {
       description: "Nam ultrices,  nulla elit ac nulla. Sed vel enim sit viverra dapibus.", image: "assets/img/45.jpg", price: 9684, stock: 4, featured: false, active: false, action: false
     },
     {
-      id: 46, catId: 3, title: "Rendez-vous d'Anna, Les (Meetings of Anna, The)", author: "Merrilee Coghill",
+      id: 46, catId: 2, title: "Rendez-vous d'Anna, Les (Meetings of Anna, The)", author: "Merrilee Coghill",
       description: "Vivamus in felis eu sapien cursus vestibulum.", image: "assets/img/46.jpg", price: 8945, stock: 1, featured: false, active: false, action: true
     },
     {
@@ -205,7 +205,7 @@ export class ProductService {
       description: "Curabitur at ipsum ac tellus semper interdum. Quisque arcu libero, diam.", image: "assets/img/49.jpg", price: 6135, stock: 5, featured: true, active: true, action: true
     },
     {
-      id: 50, catId: 3, title: "August", author: "Lorine Struijs",
+      id: 50, catId: 2, title: "August", author: "Lorine Struijs",
       description: "Nullam varius. Mauris ullamcorper purus sit amet nulla.", image: "assets/img/50.jpg", price: 9071, stock: 9, featured: true, active: false, action: true
     },
     {
