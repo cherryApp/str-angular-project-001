@@ -1,12 +1,16 @@
-<div class="container">
-    <div class="row">
+<div class="container-">
+    <div class="row ">
 
-        <div class="offset-lg-1" *ngFor="let product of featuredList">
-            <app-product-card [product]="product"></app-product-card>
+        <div class="d-flex flex-row justify-content-center col-12 col-md-6 offset-lg-1">
+            <div class="" *ngFor="let product of featuredList">
+                <app-product-card [product]="product"></app-product-card>
+            </div>
         </div>
+
         <div class="offset-lg-1" *ngFor="let product of cat02Products">
             <app-product-card [product]="product"></app-product-card>
         </div>
+
         <div class="offset-lg-1" *ngFor="let product of cat01Products">
             <app-product-card [product]="product"></app-product-card>
         </div>
