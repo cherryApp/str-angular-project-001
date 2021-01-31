@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   product = this.getCard(1);
   productsCategory = this.allProductsInCategory(1);
+  actionProducts = this.fiveRandomActionProductsInCategory();
   featuredList = this.topFiveFeaturedProducts;
 
   /*   featuredList = this.allProductsInCategory(2); */
@@ -34,6 +35,12 @@ export class HomeComponent implements OnInit {
 
   fiveRandomProductsInCategory(catId: number): Product[] {
     return this.allProductsInCategory(catId)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 5);
+  }
+
+  fiveRandomActionProductsInCategory(): Product[] {
+    return this.productsCategory.filter(product => product.action)
       .sort(() => 0.5 - Math.random())
       .slice(0, 5);
   }
