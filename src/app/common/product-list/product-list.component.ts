@@ -8,10 +8,27 @@ import { Product } from '../../model/product';
 })
 export class ProductListComponent implements OnInit {
 
+  @Input() phraseString: string = '';
+  
   @Input() products: Product[] = [];
-  constructor() { }
+  
+  @Input() catid: number = 0;
+
+  currentProduct: Product = new Product();
+
+  constructor() {
+    this.onStartPhrase();
+  }
 
   ngOnInit(): void {
+  }
+
+  onChangePhrase(event: Event): void {
+    this.phraseString = (event.target as HTMLInputElement).value;
+  }
+
+  onStartPhrase(): void {
+    this.phraseString = '';
   }
 
 }

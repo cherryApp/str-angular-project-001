@@ -57,3 +57,20 @@
     }
 
 }
+
+.is-active {
+    opacity: .5;
+    filter: grayscale(100%) blur(0);
+
+    &:hover {
+        transform: scale(.9);
+        opacity: .3;
+        filter: grayscale(100%) blur(.5rem);
+    }
+}
+
+.is-featured {
+    .card-price {
+        background-color: rgba(175, 1, 131, 1);
+    }
+}

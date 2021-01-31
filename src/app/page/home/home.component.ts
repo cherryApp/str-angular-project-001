@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
 
   productList: Product[] = this.productService.list;
 
+  cat = 0;
+
   constructor(
     private productService: ProductService,
   ) {}
