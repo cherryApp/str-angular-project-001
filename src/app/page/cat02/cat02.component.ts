@@ -15,6 +15,7 @@ export class Cat02Component implements OnInit {
 
   featuredList = this.topFiveFeaturedProducts;
   productList: Product[] = this.productService.list;
+  cat02Products = this.allProductsInCategory(2);
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
