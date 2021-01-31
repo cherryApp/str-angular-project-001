@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class ProductListComponent implements OnInit {
 
   @Input() productList: Product[] = this.productService.list;
-
+  @Input() categoryList2: Product[];
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
