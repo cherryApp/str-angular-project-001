@@ -82,7 +82,7 @@ export class ProductService {
 
   fiveRandomProductsInCategory(catId: number): Product[] {
     return this.allProductsInCategory(catId)
-      .sort(() => 0.5 - Math.random())
+      // .sort(() => 0.5 - Math.random())
       .slice(0, 5);
   }
 
