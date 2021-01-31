@@ -1,6 +1,7 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 
 @Component({
@@ -10,12 +11,14 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductPagingComponent implements OnInit {
 
-  @Input() featuredList: Product[];
-  // product: Product;
+  @Input() featuredList: Product[] = this.productService.fiveRandomProductsInCategory(1);
+
+
+  @Input() product: Product;
 
 
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
