@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../model/product';
 import { ProductService } from '../../service/product-service';
+import { ProductListComponent } from '../../common/product-list/product-list.component';
+
 
 @Component({
   selector: 'app-cat01',
@@ -8,6 +10,8 @@ import { ProductService } from '../../service/product-service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
+
+  phrase:string='';
 
   product: Product = new Product();
   productList: Product[] = this.productService.list;
@@ -24,5 +28,8 @@ export class Cat01Component implements OnInit {
   
   ngOnInit(): void {
   }
+  onChangePhrase(event:Event): void{
+this.phrase = (event.target as HTMLInputElement).value;
+}
 
 }
