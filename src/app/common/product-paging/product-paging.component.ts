@@ -16,7 +16,7 @@ export class ProductPagingComponent implements OnInit {
 
   @Input() product: Product;
 
-
+  @Input() cat02Products: Product[];
 
   constructor() { }
 
