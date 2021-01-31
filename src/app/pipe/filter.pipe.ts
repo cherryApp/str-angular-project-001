@@ -4,20 +4,17 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-  transform(value: any[], phrase: string): any {
-    if (!phrase) {
-      return value;
-    }
-    phrase = ('' + phrase).toLowerCase();
-    return value.filter((item) => {
-      let isOK: boolean = false;
-      for (let k in item) {
-        let check = item[k].toString().toLowerCase();
-        if (check.indexOf(phrase) > -1) {
-          isOK = true;
-        }
-      }
-      return isOK;
-    });
+   transform(value: any[], phrase: string, key: string = 'name'): any[]{
+  
+     if(!Array.isArray(value) || !phrase || !key ){
+       return value;
+     }
+
+     phrase=(''+phrase).toLowerCase();
+     
+     return value.filter(item=>{
+       const iKey:string=(''+item[key]).toLowerCase();
+       return iKey.includes(phrase);
+       });
 }
 }
