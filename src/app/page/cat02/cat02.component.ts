@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat02Component implements OnInit {
 
-  CategoryList2 = this.allProductsInCategory(2);
+  categoryList2 = this.allProductsInCategory(2);
 
   constructor(private productService: ProductService) { }
 
