@@ -10,7 +10,9 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductPagingComponent implements OnInit {
 
-  @Input() product: Product;
+  @Input() featuredList: Product[];
+  // product: Product;
+
 
 
   constructor() { }
