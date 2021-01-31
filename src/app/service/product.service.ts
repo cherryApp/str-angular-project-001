@@ -66,46 +66,53 @@ export class ProductService {
 
   constructor() { }
 
-  topFiveFeaturedProducts: Product[] = this.list.filter(product => product.featured)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
+  // topFiveFeaturedProducts: Product[] = this.list.filter(product => product.featured)
+  //   .sort(() => 0.5 - Math.random())
+  //   .slice(0, 5);
 
-  // productsInCategory(catId: number): Product[] {
-  //   return this.list.filter(product => product.catId == catId)
-  //     .sort(() => 0.5 - Math.random())
+  // // productsInCategory(catId: number): Product[] {
+  // //   return this.list.filter(product => product.catId == catId)
+  // //     .sort(() => 0.5 - Math.random())
+  // //     .slice(0, 5);
+  // // }
+
+  // allProductsInCategory(catId: number): Product[] {
+  //   return this.list.filter(product => product.catId == catId);
+  // }
+
+  // fiveRandomProductsInCategory(catId: number): Product[] {
+  //   return this.allProductsInCategory(catId)
+  //     // .sort(() => 0.5 - Math.random())
   //     .slice(0, 5);
   // }
 
-  allProductsInCategory(catId: number): Product[] {
-    return this.list.filter(product => product.catId == catId);
-  }
+  // getCard(id: number): ProductCard {
+  //   const myCard = new ProductCard();
+  //   const myProduct = this.list.find(item => item.id == id);
+  //   if (myProduct) {
+  //     myCard.id = myProduct.id;
+  //     myCard.author = myProduct.author;
+  //     myCard.title = myProduct.title;
+  //     myCard.description = myProduct.description;
+  //     myCard.image = "/src/assets/img/" + myProduct.image;
+  //     myCard.price = myProduct.price;
+  //     myCard.stock = myProduct.stock;
+  //   };
+  //   return myCard;
+  // }
 
-  fiveRandomProductsInCategory(catId: number): Product[] {
-    return this.allProductsInCategory(catId)
-      // .sort(() => 0.5 - Math.random())
-      .slice(0, 5);
-  }
+  // // productsWithPath(method: Function, id: number): Product[] | ProductCard {
+  // //   const array: any = method(id);
+  // //   if (array)
+  // //     array.map(item => item.image = "/src/assets/img/" + item.image);
+  // //   return
+  // // }
 
-  getCard(id: number): ProductCard {
-    const myCard = new ProductCard();
-    const myProduct = this.list.find(item => item.id == id);
-    if (myProduct) {
-      myCard.id = myProduct.id;
-      myCard.author = myProduct.author;
-      myCard.title = myProduct.title;
-      myCard.description = myProduct.description;
-      myCard.image = "/src/assets/img/" + myProduct.image;
-      myCard.price = myProduct.price;
-      myCard.stock = myProduct.stock;
-    };
-    return myCard;
-  }
-
-  // productsWithPath(method: Function, id: number): Product[] | ProductCard {
+  // productsWithPath(method: Function, id: number): Product[] {
   //   const array: any = method(id);
   //   if (array)
   //     array.map(item => item.image = "/src/assets/img/" + item.image);
-  //   return
+  //   return array;
   // }
 
 }
