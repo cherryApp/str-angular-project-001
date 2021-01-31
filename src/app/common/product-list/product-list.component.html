@@ -4,4 +4,9 @@
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
+    <div class="row">
+        <div *ngFor="let product of actionProducts">
+            <app-product-card [product]="product"></app-product-card>
+        </div>
+    </div>
 </div>
