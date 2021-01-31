@@ -1,0 +1,59 @@
+.card {
+
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0 , .5);
+        z-index: 999;
+    }
+
+    &-image {
+        display: block;
+        width: 100%;
+        padding-top: 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+
+        // Tablet
+        @media (min-width: 768px) {
+            padding-top: 66%;
+        }
+
+        // Desktop
+        @media (min-width: 992px) {
+            padding-top: 100%;
+        }
+    }
+
+    &-desc {
+        font-size: .8rem;
+    }
+
+    &-stock {
+        font-size: .8rem;
+        color: rgba(0, 0, 0 , .5);
+        b {
+            font-weight: 600;
+            color: rgba(0, 0, 0 , 1);
+        }
+
+    }
+
+    &-price {
+        font-size: .8rem;
+        color: rgba(255, 255, 255 , .7);
+        background-color: rgb(85, 107, 47);
+        text-align: right;
+        padding: .3rem 1rem;
+        border-radius: .3rem;
+        b {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255 , 1);
+        }
+    }
+
+}
