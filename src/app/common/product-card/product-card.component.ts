@@ -11,7 +11,7 @@ import { ProductCard } from '../product-card';
 })
 export class ProductCardComponent implements OnInit {
 @Input() product: Product;
-productCard: ProductCard = new ProductCard();
+//productCard: ProductCard = new ProductCard();
   constructor() {}
 
   ngOnInit(): void {
