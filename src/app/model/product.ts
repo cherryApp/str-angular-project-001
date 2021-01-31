@@ -6,8 +6,8 @@ export class Product {
   image: string = '';
   price: number = 0;
   stock: number = 0;
-  featured: boolean = true;
-  active: boolean = true;
+  featured: boolean = false;
+  active: boolean = false;
 
   constructor(properties?: Product) {
     if (properties) {
@@ -18,8 +18,8 @@ export class Product {
       this.image = properties.image || '';
       this.price = properties.price || 0;
       this.stock = properties.stock || 0;
-      this.featured = properties.featured || true;
-      this.active = properties.active || true;
+      this.featured = properties.featured || false;
+      this.active = properties.active || false;
     }
   }
 }
