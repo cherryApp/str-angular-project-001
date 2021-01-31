@@ -9,8 +9,12 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat02Component implements OnInit {
 
-  CategoryList2 = this.allProductsInCategory(2);
+  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
 
+  featuredList = this.topFiveFeaturedProducts;
+  productList: Product[] = this.productService.list;
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
