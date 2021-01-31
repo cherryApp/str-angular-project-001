@@ -227,7 +227,7 @@ export class ProductService {
       image: "src/assets/img/h 22 ford.jpg",
       price: "$1501.04",
       stock: 22,
-      featured: false,
+      featured: true,
       active: false
     }, {
       id: 23,
