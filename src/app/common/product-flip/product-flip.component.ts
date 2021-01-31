@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/model/product';
-import {ProductService} from 'src/app/service/product-service';
-import {ProductCardComponent} from '????src/app/common/product-flip\product-flip.component???';
+import { ProductService } from 'src/app/service/product-service';
+import { ProductCardComponent } from 'src/app/common/product-card/product-card.component';
+
 
 @Component({
   selector: 'app-product-flip',
@@ -10,22 +11,27 @@ import {ProductCardComponent} from '????src/app/common/product-flip\product-flip
 })
 export class ProductFlipComponent implements OnInit {
 
-  list: Product[] = ProductService.list;
+  @Input() products: Product[] = [];
+  @Input() product: Product;
+  @Input() productK: Product;
+  @Input() productA: Product;
+  
+    
+  productList: Product[] = this.productService.list;
+  
 
-  FeaturedProductFlipList: Product[] = this.list.filter  (product => product.featured === true )
-  // random kell kiválsaztni
+  lapozoListK: Product[] = this.productList.filter( product => product.featured )
+    .sort( () => 0.5 - Math.random())
+    .slice(0, 5);
+    
 
-  ActiveProductFlipList: Product[] = this.list.filter  (product => product.active === true )
-  // random kell kiválsaztni
+  lapozoListA: Product[] = this.productList.filter( product => product.active )
+    .sort( () => 0.5 - Math.random())
+    .slice(0, 5);
 
-  cat1ProductFlipList: Product[] = this.list.filter  (product => product.catId == 1 && product.featured === true )
-  // random kell kiválsaztni )
-
-
-  cat2ProductFlipList: Product[] = this.list.filter  (product => product.catId == 2 && product.featured === true)
-  // random kell kiválsaztni
-
-  constructor() { }
+  constructor(
+    private productService: ProductService,    
+  ) { }
 
   ngOnInit(): void {
   }
