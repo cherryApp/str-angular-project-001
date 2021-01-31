@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductListComponent } from 'src/app/common/product-list/product-list.component';
-import { LapozoComponent } from 'src/app/common/lapozo/lapozo.component';
+import { ProductFlipComponent } from 'src/app/common/product-flip/product-flip.component';
 import { Product } from '../../model/product';
 import { ProductService } from '../../service/product-service';
 
