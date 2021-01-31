@@ -9,7 +9,7 @@ export class ProductService {
     let list : Array <{id, catId, name, description, image, price, stock, featured, active}> =
     [{
       id: 1,
-      catId: "049163760-8",
+      catId: 1001,
       name: "Ford",
       description: "velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
       image: "src/assets/img/h 1 ford.jpg",
@@ -19,7 +19,7 @@ export class ProductService {
       active: false
     }, {
       id: 2,
-      catId: "922307141-0",
+      catId: 1002,
       name: "Mitsubishi",
       description: "sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus",
       image: "src/assets/img/2 mitsubishi.jpg",
@@ -29,7 +29,7 @@ export class ProductService {
       active: true
     }, {
       id: 3,
-      catId: "050826762-5",
+      catId: 1002,
       name: "Mazda",
       description: "elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac",
       image: "src/assets/img/3 mazda.jpg",
@@ -39,7 +39,7 @@ export class ProductService {
       active: true
     }, {
       id: 4,
-      catId: "029167751-7",
+      catId: 1002,
       name: "Land Rover",
       description: "massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit",
       image: "src/assets/img/4 land rover.jpg",
@@ -49,7 +49,7 @@ export class ProductService {
       active: true
     }, {
       id: 5,
-      catId: "822327212-1",
+      catId: 1002,
       name: "Volvo",
       description: "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
       image: "src/assets/img/5 volvo.jpg",
@@ -59,7 +59,7 @@ export class ProductService {
       active: true
     }, {
       id: 6,
-      catId: "382181726-7",
+      catId: 1002,
       name: "Plymouth",
       description: "curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel",
       image: "src/assets/img/6 plymouth.jpg",
@@ -69,7 +69,7 @@ export class ProductService {
       active: true
     }, {
       id: 7,
-      catId: "291712223-4",
+      catId: 1001,
       name: "Ford",
       description: "nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh",
       image: "src/assets/img/h 7 ford.jpg",
@@ -79,7 +79,7 @@ export class ProductService {
       active: false
     }, {
       id: 8,
-      catId: "771141126-X",
+      catId: 1002,
       name: "Chevrolet",
       description: "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus",
       image: "src/assets/img/8 chevrolet.jpg",
@@ -89,7 +89,7 @@ export class ProductService {
       active: false
     }, {
       id: 9,
-      catId: "382295478-0",
+      catId: 1002,
       name: "Acura",
       description: "nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum",
       image: "src/assets/img/9 acura.jpg",
@@ -99,7 +99,7 @@ export class ProductService {
       active: false
     }, {
       id: 10,
-      catId: "334088707-1",
+      catId: 1002,
       name: "Saturn",
       description: "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet",
       image: "src/assets/img/10 saturn.jpg",
@@ -109,7 +109,7 @@ export class ProductService {
       active: false
     }, {
       id: 11,
-      catId: "824147005-3",
+      catId: 1002,
       name: "Honda",
       description: "vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in",
       image: "src/assets/img/11 honda.jpg",
@@ -119,7 +119,7 @@ export class ProductService {
       active: true
     }, {
       id: 12,
-      catId: "963574318-1",
+      catId: 1002,
       name: "Plymouth",
       description: "nullam orci pede venenatis non sodales sed tincidunt eu felis",
       image: "src/assets/img/12 plymouth.jpg",
@@ -129,7 +129,7 @@ export class ProductService {
       active: false
     }, {
       id: 13,
-      catId: "784175986-X",
+      catId: 1002,
       name: "Dodge",
       description: "est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna",
       image: "src/assets/img/13 dodge.jpg",
@@ -139,7 +139,7 @@ export class ProductService {
       active: true
     }, {
       id: 14,
-      catId: "405434909-9",
+      catId: 1002,
       name: "Lexus",
       description: "volutpat quam pede lobortis ligula sit amet eleifend pede libero",
       image: "src/assets/img/14 lexus.jpg",
@@ -149,7 +149,7 @@ export class ProductService {
       active: false
     }, {
       id: 15,
-      catId: "792740691-4",
+      catId: 1002,
       name: "Chevrolet",
       description: "non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros",
       image: "src/assets/img/15 chevrolet.jpg",
@@ -159,7 +159,7 @@ export class ProductService {
       active: false
     }, {
       id: 16,
-      catId: "469950509-0",
+      catId: 1002,
       name: "Jeep",
       description: "quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
       image: "src/assets/img/16 jeep.jpg",
@@ -169,7 +169,7 @@ export class ProductService {
       active: true
     }, {
       id: 17,
-      catId: "279548125-1",
+      catId: 1002,
       name: "Saab",
       description: "primis in faucibus orci luctus et ultrices posuere cubilia curae",
       image: "src/assets/img/17 saab.jpg",
@@ -179,7 +179,7 @@ export class ProductService {
       active: true
     }, {
       id: 18,
-      catId: "957333982-X",
+      catId: 1002,
       name: "Volkswagen",
       description: "venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada",
       image: "src/assets/img/18 volkswagen.jpg",
@@ -189,7 +189,7 @@ export class ProductService {
       active: true
     }, {
       id: 19,
-      catId: "870815816-9",
+      catId: 1002,
       name: "BMW",
       description: "odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat",
       image: "src/assets/img/19 bmw.jpg",
@@ -199,7 +199,7 @@ export class ProductService {
       active: true
     }, {
       id: 20,
-      catId: "073218710-9",
+      catId: 1001,
       name: "Ford",
       description: "malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem",
       image: "src/assets/img/h 20 ford.jpg",
@@ -209,7 +209,7 @@ export class ProductService {
       active: false
     }, {
       id: 21,
-      catId: "852044100-9",
+      catId: 1002,
       name: "Infiniti",
       description: "aliquam non mauris morbi non lectus aliquam sit amet diam in",
       image: "src/assets/img/21 infiniti.jpg",
@@ -219,7 +219,7 @@ export class ProductService {
       active: true
     }, {
       id: 22,
-      catId: "066655309-2",
+      catId: 1001,
       name: "Ford",
       description: "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia",
       image: "src/assets/img/h 22 ford.jpg",
@@ -229,7 +229,7 @@ export class ProductService {
       active: false
     }, {
       id: 23,
-      catId: "574459279-2",
+      catId: 1001,
       name: "Nissan",
       description: "nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo",
       image: "src/assets/img/h 23 nissan.jpg",
@@ -239,7 +239,7 @@ export class ProductService {
       active: false
     }, {
       id: 24,
-      catId: "941083495-3",
+      catId: 1002,
       name: "Chevrolet",
       description: "lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae",
       image: "src/assets/img/24 chevrolet.jpg",
@@ -249,7 +249,7 @@ export class ProductService {
       active: true
     }, {
       id: 25,
-      catId: "522348242-5",
+      catId: 1002,
       name: "Dodge",
       description: "posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum",
       image: "src/assets/img/25 dodge.jpg",
@@ -259,7 +259,7 @@ export class ProductService {
       active: true
     }, {
       id: 26,
-      catId: "810433778-5",
+      catId: 1002,
       name: "Cadillac",
       description: "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices",
       image: "src/assets/img/26 cadillac.jpg",
@@ -269,7 +269,7 @@ export class ProductService {
       active: true
     }, {
       id: 27,
-      catId: "907241737-2",
+      catId: 1002,
       name: "Chevrolet",
       description: "congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue",
       image: "src/assets/img/27 chevrolet.jpg",
@@ -279,7 +279,7 @@ export class ProductService {
       active: true
     }, {
       id: 28,
-      catId: "590555027-1",
+      catId: 1002,
       name: "Chevrolet",
       description: "pretium quis lectus suspendisse potenti in eleifend quam a odio in",
       image: "src/assets/img/28 chevrolet.jpg",
@@ -289,7 +289,7 @@ export class ProductService {
       active: true
     }, {
       id: 29,
-      catId: "698791323-4",
+      catId: 1002,
       name: "GMC",
       description: "velit eu est congue elementum in hac habitasse platea dictumst",
       image: "src/assets/img/29 gmc.jpg",
@@ -299,7 +299,7 @@ export class ProductService {
       active: false
     }, {
       id: 30,
-      catId: "406943942-0",
+      catId: 1002,
       name: "Chevrolet",
       description: "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris",
       image: "src/assets/img/30 chevrolet.jpg",
@@ -309,7 +309,7 @@ export class ProductService {
       active: true
     }, {
       id: 31,
-      catId: "179623001-4",
+      catId: 1002,
       name: "Jensen",
       description: "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus",
       image: "src/assets/img/31 jensen.jpg",
@@ -319,7 +319,7 @@ export class ProductService {
       active: false
     }, {
       id: 32,
-      catId: "066328645-X",
+      catId: 1002,
       name: "Chevrolet",
       description: "ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
       image: "src/assets/img/32 chevrolet.jpg",
@@ -329,7 +329,7 @@ export class ProductService {
       active: false
     }, {
       id: 33,
-      catId: "497785027-0",
+      catId: 1002,
       name: "Chevrolet",
       description: "magna ac consequat metus sapien ut nunc vestibulum ante ipsum",
       image: "src/assets/img/33 chevrolet.jpg",
@@ -339,7 +339,7 @@ export class ProductService {
       active: false
     }, {
       id: 34,
-      catId: "876456696-X",
+      catId: 1002,
       name: "Lexus",
       description: "ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
       image: "src/assets/img/34 lexus.jpg",
@@ -349,7 +349,7 @@ export class ProductService {
       active: false
     }, {
       id: 35,
-      catId: "711394282-2",
+      catId: 1002,
       name: "Volvo",
       description: "leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet",
       image: "src/assets/img/35 volvo.jpg",
@@ -359,7 +359,7 @@ export class ProductService {
       active: true
     }, {
       id: 36,
-      catId: "025295951-5",
+      catId: 1002,
       name: "Pontiac",
       description: "consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
       image: "src/assets/img/36 pontiac.jpg",
@@ -369,7 +369,7 @@ export class ProductService {
       active: false
     }, {
       id: 37,
-      catId: "411792077-4",
+      catId: 1002,
       name: "Honda",
       description: "quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse",
       image: "src/assets/img/37 honda.jpg",
@@ -379,7 +379,7 @@ export class ProductService {
       active: false
     }, {
       id: 38,
-      catId: "236511355-9",
+      catId: 1002,
       name: "Isuzu",
       description: "erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis",
       image: "src/assets/img/38 isuzu.jpg",
@@ -389,7 +389,7 @@ export class ProductService {
       active: false
     }, {
       id: 39,
-      catId: "829411699-8",
+      catId: 1002,
       name: "Suzuki",
       description: "hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel",
       image: "src/assets/img/39 suzuki.jpg",
@@ -399,7 +399,7 @@ export class ProductService {
       active: false
     }, {
       id: 40,
-      catId: "958512806-3",
+      catId: 1002,
       name: "Chevrolet",
       description: "non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac",
       image: "src/assets/img/40 chevrolet.jpg",
@@ -409,7 +409,7 @@ export class ProductService {
       active: false
     }, {
       id: 41,
-      catId: "485364871-2",
+      catId: 1002,
       name: "Pontiac",
       description: "vestibulum quam sapien varius ut blandit non interdum in ante",
       image: "src/assets/img/41 pontiac.jpg",
@@ -419,7 +419,7 @@ export class ProductService {
       active: true
     }, {
       id: 42,
-      catId: "522769390-0",
+      catId: 1002,
       name: "GMC",
       description: "risus praesent lectus vestibulum quam sapien varius ut blandit non interdum",
       image: "src/assets/img/42 gmc.jpg",
@@ -429,7 +429,7 @@ export class ProductService {
       active: false
     }, {
       id: 43,
-      catId: "372203423-X",
+      catId: 1002,
       name: "Chrysler",
       description: "id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis",
       image: "src/assets/img/43 chrysler.jpg",
@@ -439,7 +439,7 @@ export class ProductService {
       active: false
     }, {
       id: 44,
-      catId: "516035757-2",
+      catId: 1002,
       name: "Dodge",
       description: "ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam",
       image: "src/assets/img/44 dodge.jpg",
@@ -449,7 +449,7 @@ export class ProductService {
       active: true
     }, {
       id: 45,
-      catId: "926861056-6",
+      catId: 1001,
       name: "Ford",
       description: "parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
       image: "src/assets/img/h 45 ford.jpg",
@@ -459,7 +459,7 @@ export class ProductService {
       active: false
     }, {
       id: 46,
-      catId: "707198181-7",
+      catId: 1002,
       name: "BMW",
       description: "enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id",
       image: "src/assets/img/46 bmw.jpg",
@@ -469,7 +469,7 @@ export class ProductService {
       active: true
     }, {
       id: 47,
-      catId: "423636360-7",
+      catId: 1002,
       name: "Oldsmobile",
       description: "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum",
       image: "src/assets/img/47 oldsmobile.jpg",
@@ -479,7 +479,7 @@ export class ProductService {
       active: true
     }, {
       id: 48,
-      catId: "825255491-1",
+      catId: 1002,
       name: "Pontiac",
       description: "convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices",
       image: "src/assets/img/48 pontiac.jpg",
@@ -489,7 +489,7 @@ export class ProductService {
       active: true
     }, {
       id: 49,
-      catId: "261501436-6",
+      catId: 1002,
       name: "Nissan",
       description: "pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
       image: "src/assets/img/49 nissan.jpg",
@@ -499,7 +499,7 @@ export class ProductService {
       active: true
     }, {
       id: 50,
-      catId: "190710717-7",
+      catId: 1002,
       name: "Nissan",
       description: "tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero",
       image: "src/assets/img/50 nissan.jpg",
