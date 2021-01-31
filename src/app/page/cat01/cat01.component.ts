@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../model/product';
+import { ProductService } from '../../service/product-service';
 
 @Component({
   selector: 'app-cat01',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Cat01Component implements OnInit {
 
-  constructor() { }
+  product: Product = new Product();
+  productList: Product[] = this.productService.list;
+  kiemelt: boolean = true;
+  phrase: string = '';
+
+  kiemeltList: Product[] = this.productList.filter(item => item);
+  kategoria1List: boolean=true;
+
+  constructor(
+    private productService: ProductService,
+  ) { }
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
 
   ngOnInit(): void {
   }
