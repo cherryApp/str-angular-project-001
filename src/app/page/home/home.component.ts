@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   productsCategory = this.allProductsInCategory(1);
   actionProducts = this.fiveRandomActionProductsInCategory();
   featuredList = this.topFiveFeaturedProducts;
+  phrase = '';
 
   /*   featuredList = this.allProductsInCategory(2); */
   productList: Product[] = this.productService.list;
@@ -65,6 +66,10 @@ export class HomeComponent implements OnInit {
     if (array)
       array.map(item => item.image = "assets/img/" + item.image);
     return array;
+  }
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
 
 }
