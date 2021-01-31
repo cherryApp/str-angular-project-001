@@ -12,11 +12,9 @@ import { Product } from 'src/app/model/product';
 export class ProductPagingComponent implements OnInit {
 
   @Input() featuredList: Product[];
-
-
   @Input() product: Product;
-
   @Input() cat02Products: Product[];
+  @Input() cat01Products: Product[];
 
   constructor() { }
 
