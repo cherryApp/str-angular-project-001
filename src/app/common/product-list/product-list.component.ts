@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
 
   @Input() productList: Product[];
   @Input() actionProducts: Product[];
+  @Input() phrase: string = '';
   constructor() { }
 
   ngOnInit(): void {
