@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   product = this.getCard(1);
   productsCategory = this.allProductsInCategory(1);
-  featuredList = this.productService.list;
+  featuredList = this.topFiveFeaturedProducts;
 
   /*   featuredList = this.allProductsInCategory(2); */
   productList: Product[] = this.productService.list;
