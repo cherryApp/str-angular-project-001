@@ -19,7 +19,7 @@ export class Cat01Component implements OnInit {
   
 
   kiemeltList: Product[] = this.productList.filter(item => item);
-  kategoria1List: boolean=true;
+ kategoria1List: Product[] = this.productList.filter(item => item.catId === 1);
 
   constructor(
     private productService: ProductService,
