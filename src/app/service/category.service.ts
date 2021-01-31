@@ -14,7 +14,7 @@ export class CategoryService {
     },
     {
       id: 2,
-      name: "Szépirodalom",
+      name: "Felnőtt",
       description: "hazai és külhoni próza"
     },
     {
@@ -37,7 +37,8 @@ export class CategoryService {
   constructor() { }
 
   getCategoryId(name: string): number {
-    const obj = this.list.find(item => item.name == name)
+    const nameLow = name.toLocaleLowerCase();
+    const obj = this.list.find(item => item.name.toLocaleLowerCase() === nameLow);
     return obj ? obj.id : null;
   }
 }
