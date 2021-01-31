@@ -108,11 +108,4 @@ export class ProductService {
   //   return
   // }
 
-  productsWithPath(method: Function, id: number): Product[] {
-    const array: any = method(id);
-    if (array)
-      array.map(item => item.image = "/src/assets/img/" + item.image);
-    return array;
-  }
-
 }
