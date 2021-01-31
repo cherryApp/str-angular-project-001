@@ -10,11 +10,16 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomeComponent implements OnInit {
 
+
+  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 5);
+
   product = this.getCard(1);
   productsCategory = this.allProductsInCategory(1);
-  /* featuredList = this.productService.fiveRandomProductsInCategory(1); */
+  featuredList = this.productService.list;
 
-  featuredList = this.allProductsInCategory(2);
+  /*   featuredList = this.allProductsInCategory(2); */
   productList: Product[] = this.productService.list;
 
   constructor(private productService: ProductService) { }
@@ -22,9 +27,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  topFiveFeaturedProducts: Product[] = this.productService.list.filter(product => product.featured)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 5);
 
   allProductsInCategory(catId: number): Product[] {
     return this.productService.list.filter(product => product.catId == catId);
@@ -32,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   fiveRandomProductsInCategory(catId: number): Product[] {
     return this.allProductsInCategory(catId)
-      // .sort(() => 0.5 - Math.random())
+      .sort(() => 0.5 - Math.random())
       .slice(0, 5);
   }
 
@@ -44,7 +46,7 @@ export class HomeComponent implements OnInit {
       myCard.author = myProduct.author;
       myCard.title = myProduct.title;
       myCard.description = myProduct.description;
-      myCard.image = "/src/assets/img/" + myProduct.image;
+      myCard.image = "assets/img/" + myProduct.image;
       myCard.price = myProduct.price;
       myCard.stock = myProduct.stock;
     };
@@ -54,7 +56,7 @@ export class HomeComponent implements OnInit {
   productsWithPath(method: Function, id: number): Product[] {
     const array: any = method(id);
     if (array)
-      array.map(item => item.image = "/src/assets/img/" + item.image);
+      array.map(item => item.image = "assets/img/" + item.image);
     return array;
   }
 
