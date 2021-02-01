@@ -84,7 +84,7 @@ export class ProductService {
       return sourceArray.filter( item => !item.active);
     }
 
-    // Az INAKTÍV elemeket adja vissza
+    // Az ÖSSZES elemeket adja vissza
     getAllItems(sourceArray): Product[] {
       return sourceArray.filter( item => item);
     }

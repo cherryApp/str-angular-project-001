@@ -11,7 +11,6 @@ export class ProductListComponent implements OnInit {
 
   // Egy keresőszóra vár
   @Input() phraseString: string = '';
-  @Input() descPhraseString: string = '';
 
   // Termékekre vár
   @Input() products: Product[] = [];
