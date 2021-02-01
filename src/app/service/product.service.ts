@@ -99,13 +99,13 @@ export class ProductService {
       return sourceArray.sort( () => Math.random() - 0.5);
     }
 
-    // Ár szerint növekvő sorrendbe rendezi a tömböt
-    sortByPrice(sourceArray): Product[] {
+    // Az átadott tulajdonság szerint növekvő sorrendbe rendezi a tömböt
+    sortBy(sourceArray, property: string): Product[] {
       return sourceArray.sort( (a, b) => {
-        if ( a.price < b.price ){
+        if ( a[property] < b[property] ){
           return -1;
         }
-        if ( a.price > b.price ){
+        if ( a[property] > b[property] ){
           return 1;
         }
         return 0;

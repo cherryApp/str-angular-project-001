@@ -16,8 +16,6 @@ export class ProductListComponent implements OnInit {
   // Termékekre vár
   @Input() products: Product[] = [];
 
-  tempProducts = this.products;
-
   key: string = '';
 
   constructor( private productService: ProductService ) {}
@@ -30,10 +28,6 @@ export class ProductListComponent implements OnInit {
     this.phraseString = (event.target as HTMLInputElement).value;
   }
 
-  changeOrderByPrice(): void {
-    this.products = this.productService.sortByPrice(this.products);
-  }
-
   showActive(): void {
     this.products = this.productService.getActiveItems(this.products);
   }
@@ -43,7 +37,11 @@ export class ProductListComponent implements OnInit {
   }
 
   showAll(): void {
-    this.products = this.productService.getAllItems(this.tempProducts);
+    this.products = this.productService.getAllItems(this.products);
+  }
+
+  sortBy(property: string): void {
+    this.products = this.productService.sortBy(this.products, property);
   }
 
 }
