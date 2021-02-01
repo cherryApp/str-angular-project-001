@@ -14,14 +14,14 @@
     </div>
 
     <div class="row">
-        <div class="offset-lg-1" *ngFor="let product of cat02Products | filter:phrase:'title'">
+        <div class="mb-3 mx-auto" *ngFor="let product of cat02Products | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
 
 
     <div class="row">
-        <div class="offset-lg-1" *ngFor="let product of cat01Products | filter:phrase:'title'">
+        <div class="mb-3 mx-auto" *ngFor="let product of cat01Products | filter:phrase:'title'">
             <app-product-card [product]="product"></app-product-card>
         </div>
     </div>
