@@ -10,6 +10,7 @@ export class ProductPagerComponent implements OnInit {
   
   @Input() products: Product[] = [];
   @Input() cat: number = 0;
+  @Input() featured: number = 0;
 
   constructor() { }
 

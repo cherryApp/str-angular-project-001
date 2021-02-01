@@ -6,9 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class CatPipe implements PipeTransform {
 
-  transform(value: any[], cat: number): any[] {
+  transform(value: any[], cat: number, featured: number): any[] {
     
-    if (!Array.isArray(value) || !cat) {
+    if (!Array.isArray(value)) {
       return value;
     }
 
@@ -26,22 +26,21 @@ export class CatPipe implements PipeTransform {
     }
 
     const size = 5;
-    if (cat > -1) {
-      if (cat === 999) {
-        const arr =  value.filter( item => {
-          return item;
-        });
-        return shuffle(arr).slice(0, size);
-      } else {
-        const arr =  value.filter( item => {
-          if (item['catId'] === cat) return item;
-        });
-        return  shuffle(arr).slice(0, size);
-      }
-    } else {
-      const arr =  value.filter( item => {
+    let arr = value;
+
+    // ha kiemelt termék
+    if (featured === 1) {
+        arr =  value.filter( item => {
         if (item['featured'] === true) return item;
       });
+    }
+
+    if (cat > 0) {
+      arr =  arr.filter( item => {
+        if (item['catId'] === cat) return item;
+      });
+      return  shuffle(arr).slice(0, size);
+    } else {
       return  shuffle(arr).slice(0, size);
     }
 
