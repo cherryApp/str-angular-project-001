@@ -8,13 +8,11 @@ import { Product } from '../../model/product';
 })
 export class ProductPagerComponent implements OnInit {
   
+  // Termékekre vár
   @Input() products: Product[] = [];
-  @Input() cat: number = 0;
-  @Input() featured: number = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

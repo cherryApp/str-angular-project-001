@@ -1,5 +1,4 @@
-import { Input, Pipe, PipeTransform } from '@angular/core';
-import { exit } from 'process';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter'
@@ -7,19 +6,17 @@ import { exit } from 'process';
 
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any[], phrase: string, key: string, catid: number): any[] {
+  transform(value: any[], phrase: string, key: string): any[] {
     
-    if (!Array.isArray(value) || !key || !catid) {
+    if (!Array.isArray(value) || !phrase || !key) {
       return value;
     }
 
     phrase = ('' + phrase).toLowerCase();
 
     return value.filter( item => {
-        if (item['catId'] === catid) {
-          const strItem:string = ('' + item[key]).toLowerCase();
-          return strItem.includes(phrase);
-        } else {}
+      const strItem:string = ('' + item[key]).toLowerCase();
+      return strItem.includes(phrase);
     });
 
   }

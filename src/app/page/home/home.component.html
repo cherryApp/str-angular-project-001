@@ -28,6 +28,7 @@
 <div class="spacer"></div>
 
 <h1 class="header__magenta">Kiemelt termékek</h1>
-<app-product-pager [products]="productList" [cat]="0" [featured]="1"></app-product-pager>
+<app-product-pager [products]="featuredProducts"></app-product-pager>
+
 <h1 class="header__green mt-5">Akciós termékek</h1>
-<app-product-pager [products]="productList" [cat]="0" [featured]="2"></app-product-pager>
+<app-product-pager [products]="randomizedProducts"></app-product-pager>

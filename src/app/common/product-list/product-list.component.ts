@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../model/product';
+import { ProductService } from '../../service/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,27 +9,41 @@ import { Product } from '../../model/product';
 })
 export class ProductListComponent implements OnInit {
 
+  // Egy keresőszóra vár
   @Input() phraseString: string = '';
-  
+  @Input() descPhraseString: string = '';
+
+  // Termékekre vár
   @Input() products: Product[] = [];
-  
-  @Input() catid: number = 0;
 
-  currentProduct: Product = new Product();
+  tempProducts = this.products;
 
-  constructor() {
-    this.onStartPhrase();
-  }
+  key: string = '';
 
-  ngOnInit(): void {
-  }
+  constructor( private productService: ProductService ) {}
 
-  onChangePhrase(event: Event): void {
+  ngOnInit(): void {}
+
+  // Átadja a phraseString változónak az HTML input mező tartalát
+  onChangePhrase(event: Event, key: string): void {
+    this.key = key;
     this.phraseString = (event.target as HTMLInputElement).value;
   }
 
-  onStartPhrase(): void {
-    this.phraseString = '';
+  changeOrderByPrice(): void {
+    this.products = this.productService.sortByPrice(this.products);
+  }
+
+  showActive(): void {
+    this.products = this.productService.getActiveItems(this.products);
+  }
+
+  showInactive(): void {
+    this.products = this.productService.getInactiveItems(this.products);
+  }
+
+  showAll(): void {
+    this.products = this.productService.getAllItems(this.tempProducts);
   }
 
 }

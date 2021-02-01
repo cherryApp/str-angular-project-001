@@ -1,9 +1,13 @@
 <form class="form-inline my-2 my-lg-0 py-3">
-    <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" (keyup)="onChangePhrase($event)">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input id="name-search" class="form-control mr-sm-2" type="text" placeholder="Keresés Terméknévben" (keyup)="onChangePhrase($event, 'name')">
+    <input id="desc-search" class="form-control mr-sm-2" type="text" placeholder="Keresés Leírásban" (keyup)="onChangePhrase($event, 'description')">
+    <div class="filter-button" (click)="showActive()">Aktív termékek</div>
+    <div class="filter-button" (click)="showInactive()">Inaktív termékek</div>
+    <button class="filter-button" (click)="showAll()">Összes termék</button>
 </form>
+
 <div class="row d-flex w-100">
-    <div class="col-sm-12 col-md-6 col-lg-2 px-2 mx-sm-0 mx-md-0 mx-lg-1 my-2" *ngFor="let product of products | filter: phraseString: 'name': catid">
+    <div class="col-sm-12 col-md-6 col-lg-2 px-2 mx-sm-0 mx-md-0 mx-lg-1 my-2" *ngFor="let product of products | filter: phraseString: key">
         <app-product-card [product]="product"></app-product-card>
     </div>
 </div>
