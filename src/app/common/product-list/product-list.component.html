@@ -7,10 +7,6 @@
     <div class="filter-header ml-5">Keresés: </div>
     <input id="name-search" class="form-control mr-sm-2" type="text" placeholder="Terméknévben" (keyup)="onChangePhrase($event, 'name')">
     <input id="desc-search" class="form-control mr-sm-2" type="text" placeholder="Leírásban" (keyup)="onChangePhrase($event, 'description')">
-    
-    <div class="filter-button ml-5" (click)="showActive()">Aktív termékek</div>
-    <div class="filter-button" (click)="showInactive()">Inaktív termékek</div>
-    <button class="filter-button" (click)="showAll()">Összes termék</button>
 </form>
 
 <div class="row d-flex w-100">
