@@ -15,11 +15,12 @@ export class ProductPageComponent implements OnInit {
 //home-component.html-be
 //<h3>Featured Products</h3>
 //<app-product-page [products]= "featuredProducts"></app-product-page>
-@Input() featuredList: Product[] = this.productService.fiverandomProductsinCategory(1)
-  
-const topFiveFeaturedProducts: Product[] = this.products.filter( product => product.featured )
-.sort( () => 0.5 - Math.random())
-.slice(0, 5);
+// ---------------
+
+//@Input() featuredList: Product[] = this.productService.fiverandomProductsinCategory(1)
+//const topFiveFeaturedProducts: Product[] = this.products.filter( product => product.featured )
+//.sort( () => 0.5 - Math.random())
+//.slice(0, 5);
 
 
   constructor() { }
