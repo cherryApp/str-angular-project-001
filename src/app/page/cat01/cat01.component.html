@@ -1,4 +1,5 @@
 <h1 class="header__magenta">Kiemelt {{ categoryList[0].name }}</h1>
+<p>{{ categoryList[0].description }}</p>
 <app-product-pager [products]="featuredProductsFromCategory"></app-product-pager>
 <h1 class="header__green mt-5">{{ categoryList[0].name }}</h1>
 <app-product-list [phraseString]="phrase" [products]="productsFromCategory"></app-product-list>
