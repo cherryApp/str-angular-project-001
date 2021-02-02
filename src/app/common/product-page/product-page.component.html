@@ -1,8 +1,7 @@
-<dic class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-2 offset-lg-1" *ngFor="let product of products">
-                <app-product-card [product]="product"></app-product-card>
-        </div>
+<div class="container">
+   <p *ngFor="let product of products">
+    {{ product.id }}: {{ product.name }}
+    </p> 
+</div>
 
-    </div>
-</dic>
+

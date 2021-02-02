@@ -1,4 +1,6 @@
-//1.féle
+<h1>Product List</h1>
+  <app-product-card [product]="product"></app-product-card>
+<!--1.féle
 <h2>Product-List</h2>
 
 <ul class="Products"><input type="text">
@@ -7,18 +9,13 @@
     
   </li>
 </ul>
-//2.féle
+2.féle
 <div class="products__container">
   <ng-container *ngFor="let product of products">
       <section class="product__item">
-          <figure class="product__figure">
               <img *ngIf="product.image" class="product__image" [src]="product.image" alt="" />
-          </figure>
-
-          <a [routerLink]="['/product/' + product.id]">
               <div class="product__content">
                   <strong class="product__title">{{ product.name }}</strong>
-
                   <em class="product__price">{{ product.price | currency: 'USD' }}</em>
               </div>
           </a>
@@ -26,9 +23,11 @@
   </ng-container>
 </div>
 //3. féle
-<div class="item" *ngFor="let item of products">
+<div class="product" *ngFor="let product of products">
   <h1>{{product.name}}</h1>
   <img src='{{product.image}}' />
   <p>{{product.price}}</p>
 
 </div>
+-->
+  
