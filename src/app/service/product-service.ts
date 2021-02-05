@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from '../model/product';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-list: Product[] = 
+  serverUrl: string = 'http://localhost:3000/products';
+/* list: Product[] = 
 [{"id":1,"catId":2,"name":"hgadie0","description":"amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim","image":`../../assets/img/ca188x204.jpg`,"price":8528,"stock":17,"featured":true,"active":true},
 {"id":2,"catId":2,"name":"scolcutt1","description":"mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi","image":`../../assets/img/ca188x204.jpg`,"price":8088,"stock":25,"featured":true,"active":false},
 {"id":3,"catId":1,"name":"pmereweather2","description":"sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices","image":"../../assets/img/kalium188x204.jpg","price":4292,"stock":25,"featured":true,"active":true},
@@ -56,6 +59,29 @@ list: Product[] =
 {"id":48,"catId":1,"name":"lrudgard1b","description":"eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer","image":`../../assets/img/ca188x204.jpg`,"price":1912,"stock":9,"featured":false,"active":true},
 {"id":49,"catId":1,"name":"ngott1c","description":"tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor","image":"../../assets/img/mg188x204.png","price":4460,"stock":13,"featured":false,"active":true},
 {"id":50,"catId":1,"name":"rmoyne1d","description":"hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi","image":"../../assets/img/mg188x204.png","price":7774,"stock":11,"featured":true,"active":false}]
+ */
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
+
+  getAll():Observable<Product[]>{    
+    return this.http.get<Product[]>(this.serverUrl);
+  }
+
+  get(product:Product):Observable<Product>{    
+    return this.http.get<Product>(`${this.serverUrl}/${product.id}`);
+  }
+
+  /* create(product:Product):Observable<Product>{      
+    return this.http.post<Product>(this.serverUrl,product);
+  } */
+
+  remove(product:Product):Observable<Product>{    
+    return this.http.delete<Product>(`${this.serverUrl}/${product.id}`);
+  }
+
+  update(product:Product):Observable<Product>{     
+    return this.http.patch<Product>(`${this.serverUrl}/${product.id}`,product);
+  }
 }
