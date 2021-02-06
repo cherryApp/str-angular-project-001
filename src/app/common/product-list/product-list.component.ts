@@ -10,19 +10,19 @@ import { ProductService } from '../../service/product-service';
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[] = [];
-  @Input() category1List:Product[];
+  @Input() category1List: Product[];
   @Input() category2List: Product[];
-  
-  productList$: Observable<Product[]> = this.productService.getAll(); 
-  
- @Input() phraseString:string='';
+
+  productList$: Observable<Product[]> = this.productService.getAll();
+
+  @Input() phraseString: string = '';
   constructor(
-    private productService: ProductService,    
+    private productService: ProductService,
   ) { }
 
   ngOnInit(): void {
   }
-    
+
 
 
 

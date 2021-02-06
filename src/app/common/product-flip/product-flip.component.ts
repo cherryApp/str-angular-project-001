@@ -15,11 +15,7 @@ export class ProductFlipComponent implements OnInit {
   @Input() productA: Product[];  
     
   productList$:Observable<Product[]> = this.productService.getAll();
-  
-  lapozoListK = this.productList$;
-    
-  lapozoListA = this.productList$;
-    
+     
   constructor(
     private productService: ProductService,    
   ) { }

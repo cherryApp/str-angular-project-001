@@ -10,9 +10,9 @@ export class FeaturedFilterPipe implements PipeTransform {
       return value;
     }
 
-    return value.filter(item => {
-      return (item[key]);
-    });
-  }
-
+    return value
+      .filter(item => (item[key]))
+      .slice(0, 5);
+  };
 }
+
