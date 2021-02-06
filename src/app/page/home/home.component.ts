@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../model/product';
 import { ProductService } from '../../service/product.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,22 +10,10 @@ import { ProductService } from '../../service/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  // 5 db kiemelt termék (random)
-  featuredProducts: Product[]  = this.productService.getFeaturedItems(
-    this.productService.randomize(
-      this.productService.getActiveItems(this.productService.list)
-    )
-  ).slice(0, 5);
-
-  // 5 db bármilyen termék (random)
-  randomizedProducts: Product[]  = this.productService.randomize(
-    this.productService.getActiveItems(
-      this.productService.list
-    )
-  ).slice(0, 5);
+  productList$: Observable<Product[]> = this.productService.getAll();
 
   constructor(
-    private productService: ProductService,
+    private productService: ProductService
   ) {}
 
   ngOnInit(): void {

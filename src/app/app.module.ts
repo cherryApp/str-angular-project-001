@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -11,6 +10,16 @@ import { ProductListComponent } from './common/product-list/product-list.compone
 import { ProductPagerComponent } from './common/product-pager/product-pager.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { HttpClientModule } from '@angular/common/http';     // <- második felvonás
+import { FormsModule } from '@angular/forms';
+import { CategoryPipe } from './pipe/category.pipe';
+import { ActivePipe } from './pipe/active.pipe';
+import { SlicePipe } from './pipe/slice.pipe';
+import { RandomizePipe } from './pipe/randomize.pipe';
+import { FeaturedPipe } from './pipe/featured.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';                // <- második felvonás
 
 @NgModule({
   declarations: [
@@ -23,10 +32,20 @@ import { FilterPipe } from './pipe/filter.pipe';
     ProductPagerComponent,
     ProductCardComponent,
     FilterPipe,
+    CategoryPipe,
+    ActivePipe,
+    SlicePipe,
+    RandomizePipe,
+    FeaturedPipe,
+    SorterPipe,
+    AdminComponent,
+    DataEditorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule,   // <- második felvonás
+	  FormsModule         // <- második felvonás
   ],
   providers: [],
   bootstrap: [AppComponent]
