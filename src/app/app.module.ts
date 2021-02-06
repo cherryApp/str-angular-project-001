@@ -13,8 +13,7 @@ import { ProductFlipComponent } from './common/product-flip/product-flip.compone
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { DataEditorComponent } from './common/data-editor/data-editor.component';
 import { HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
-import { FeaturedFilterPipe } from './pipe/featured-filter.pipe'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { FeaturedFilterPipe } from './pipe/featured-filter.pipe'
     FilterPipe,
     ProductFlipComponent,
     ProductCardComponent,
-    DataEditorComponent,
-    FeaturedFilterPipe
+    DataEditorComponent
   ],
   imports: [
     BrowserModule,
