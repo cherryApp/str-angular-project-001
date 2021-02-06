@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Category } from 'src/app/model/category';
 import { Product } from '../../model/product';
 import { ProductService } from '../../service/product-service';
-import { ProductListComponent } from '../../common/product-list/product-list.component';
-
+import { CategoryService } from 'src/app/service/category.service';
 
 @Component({
   selector: 'app-cat01',
@@ -12,17 +13,13 @@ import { ProductListComponent } from '../../common/product-list/product-list.com
 export class Cat01Component implements OnInit {
 
   phrase:string='';
-
-  product: Product = new Product();
-  productList: Product[] = this.productService.list;
-  kiemelt: boolean = true;
-  
-
-  kiemeltList: Product[] = this.productList.filter(item => item);
- kategoria1List: Product[] = this.productList.filter(item => item.catId === 1);
+  products: Observable<Product[]> = this.productService.getAll();
+  category: Category = this.categoryService.list[0]; 
+  featuredProduct = this.productService.getAll();
 
   constructor(
     private productService: ProductService,
+    private categoryService: CategoryService,
   ) { }
 
   
