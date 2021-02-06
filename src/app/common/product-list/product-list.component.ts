@@ -10,8 +10,8 @@ import { ProductService } from '../../service/product-service';
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[] = [];
-  @Input() kategoria1List:Product[];
-  @Input() kategoria2List: Product[];
+  @Input() category1List:Product[];
+  @Input() category2List: Product[];
   
   productList$: Observable<Product[]> = this.productService.getAll(); 
   
