@@ -9,7 +9,7 @@ import { ProductService } from '../../service/product-service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {  
-  productList: Observable<Product[]> = this.productService.getAll();
+  productList$: Observable<Product[]> = this.productService.getAll();
 
   constructor(
     private productService: ProductService,
