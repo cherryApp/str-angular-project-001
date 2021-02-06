@@ -23,18 +23,19 @@ export class ConfigService {
     {text: 'Home', link: '/', icon: 'home'},
     {text: 'Vitaminok', link: '/cat01'},
     {text: 'Ásványi anyagok', link: '/cat02'},
+    {text: 'Admin', link: '/admin'},
   ];
 
   tableCols: ITableCol[] = [
-    {key: 'id', text: '#', editable: false},
-    {key: 'catId', text: '#', editable: true},
-    {key: 'name', text: 'Fname', editable: true},
-    {key: 'description', text: 'Lname', editable: true},
-    {key: 'image', text: 'Email', editable: true},
-    {key: 'price', text: 'Gender', editable: true},
-    {key: 'stock', text: 'IP', editable: true},
-    {key: 'featured', text: 'IP', editable: true},
-    {key: 'active', text: 'IP', editable: true},
+    {key: 'id', text: 'ID', editable: false},
+    {key: 'catId', text: 'CatID', editable: true},
+    {key: 'name', text: 'name', editable: true},
+    {key: 'description', text: 'description', editable: true},
+    {key: 'image', text: 'img', editable: true},
+    {key: 'price', text: 'price', editable: true},
+    {key: 'stock', text: 'stock', editable: true},
+    {key: 'featured', text: 'featured', editable: true},
+    {key: 'active', text: 'active', editable: true},
   ];
 
   constructor() { }

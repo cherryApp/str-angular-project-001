@@ -15,9 +15,7 @@ export class Cat02Component implements OnInit {
   phrase:string='';
   products: Observable<Product[]> = this.productService.getAll();
   category: Category = this.categoryService.list[1];
-  featuredProduct = this.productService.getAll();
   
-
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,

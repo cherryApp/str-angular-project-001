@@ -12,21 +12,20 @@ import { CategoryService } from 'src/app/service/category.service';
 })
 export class Cat01Component implements OnInit {
 
-  phrase:string='';
+  phrase: string = '';
   products: Observable<Product[]> = this.productService.getAll();
-  category: Category = this.categoryService.list[0]; 
-  featuredProduct = this.productService.getAll();
+  category: Category = this.categoryService.list[0];
 
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
   ) { }
 
-  
+
   ngOnInit(): void {
   }
-  onChangePhrase(event:Event): void{
-this.phrase = (event.target as HTMLInputElement).value;
-}
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
 
 }
