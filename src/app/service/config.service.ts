@@ -23,6 +23,7 @@ export class ConfigService {
     {text: 'Home', link: '/', icon: 'home'},
     {text: 'Vitaminok', link: '/cat01'},
     {text: 'Ásványi anyagok', link: '/cat02'},
+    {text: 'Admin', link: '/admin'},
   ];
 
   tableCols: ITableCol[] = [
