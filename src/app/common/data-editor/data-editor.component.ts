@@ -26,16 +26,16 @@ export class DataEditorComponent implements OnInit {
 
   onUpdate(product: Product) : void {
     this.productService.update(product).subscribe(
-      updatedProduct => console.log(updatedProduct)
+      () => location.reload()
     );
-    () => location.reload()
+
   }
 
   onDelete(product: Product) : void {
     this.productService.remove(product).subscribe(
-      () => console.log('deleted')
+      () => location.reload()
     );
-    () => location.reload()
+
   }
 
 }
