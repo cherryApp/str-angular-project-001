@@ -12,7 +12,7 @@ import { ConfigService, ITableCol } from 'src/app/service/config.service';
 })
 export class DataEditorComponent implements OnInit {
 
-  apiUrl: string = 'http://localhost:3000/users';
+  
   productList$: Observable<Product[]> = this.productService.getAll();
   cols: ITableCol[] = this.config.tableCols;
 
@@ -25,10 +25,17 @@ export class DataEditorComponent implements OnInit {
   }
 
   onUpdate(product: Product) : void {
-    this.productService.update(product).subscribe;
+    this.productService.update(product).subscribe(
+      () => location.reload()
+    );
+
   }
+
   onDelete(product: Product) : void {
-    this.productService.remove(product).subscribe;
+    this.productService.remove(product).subscribe(
+      () => location.reload()
+    );
+
   }
 
 }
