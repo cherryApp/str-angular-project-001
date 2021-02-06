@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Category } from 'src/app/model/category';
 import { Product } from '../../model/product';
@@ -11,7 +11,7 @@ import { CategoryService } from 'src/app/service/category.service';
   styleUrls: ['./cat01.component.scss']
 })
 export class Cat01Component implements OnInit {
-
+  
   phrase: string = '';
   products: Observable<Product[]> = this.productService.getAll();
   category: Category = this.categoryService.list[0];
