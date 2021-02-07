@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../../model/product';
 import { ProductService } from '../../service/product-service';
+import { Category } from '../../model/category';
 
 @Component({
   selector: 'app-product-list',
@@ -19,6 +20,8 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
   ) { }
+
+  @Input() categoria:number=0;
 
   ngOnInit(): void {
   }

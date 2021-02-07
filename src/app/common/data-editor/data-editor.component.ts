@@ -13,7 +13,7 @@ import {FilterPipe} from 'src/app/pipe/filter.pipe';
 })
 export class DataEditorComponent implements OnInit {
 
-  apiUrl: string = 'http://localhost:3000/users';
+  
   productList$: Observable<Product[]> = this.productService.getAll();
   cols: ITableCol[] = this.config.tableCols;
 
