@@ -1,5 +1,5 @@
 export class Product {
-
+    [propname: string]: any;    // <- második felvonás
     id: number = 0;
     catId: number = 0;
     name: string = '';
@@ -24,5 +24,4 @@ export class Product {
       }
     }
 
-  }
-  
+}
