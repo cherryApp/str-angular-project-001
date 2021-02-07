@@ -12,7 +12,7 @@ import { ConfigService, ITableCol } from 'src/app/service/config.service';
 })
 export class DataEditorComponent implements OnInit {
 
-  
+
   productList$: Observable<Product[]> = this.productService.getAll();
   cols: ITableCol[] = this.config.tableCols;
 
