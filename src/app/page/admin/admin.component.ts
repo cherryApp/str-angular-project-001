@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ProductService } from 'src/app/service/product.service';
@@ -12,6 +12,9 @@ import { ConfigService, ITableCol } from 'src/app/service/config.service';
 })
 export class AdminComponent implements OnInit {
   
+  @Input() phraseString: string = '';
+  @Input() key: string = '';
+
     productList$: Observable<Product[]> = this.productService.getAll();
     cols: ITableCol[] = this.config.tableCols;
   
@@ -20,8 +23,11 @@ export class AdminComponent implements OnInit {
       private config: ConfigService,
     ) {}
 
-    ngOnInit(): void {
-      throw new Error('Method not implemented.');
+    ngOnInit(): void {}
+
+    onChangePhrase(event: Event, key: string): void {
+      this.key = key;
+      this.phraseString = (event.target as HTMLInputElement).value;
     }
   
     onUpdate(product: Product): void {
