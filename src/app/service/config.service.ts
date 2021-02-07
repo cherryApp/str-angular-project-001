@@ -27,8 +27,8 @@ export class ConfigService {
   ];
 
   tableCols: ITableCol[] = [
-    {key: 'id', text: '#', editable: false},
-    {key: 'catId', text: '#', editable: true},
+    {key: 'id', text: 'ID', editable: false},
+    {key: 'catId', text: 'CatID', editable: true},
     {key: 'name', text: 'name', editable: true},
     {key: 'description', text: 'description', editable: true},
     {key: 'image', text: 'img', editable: true},
