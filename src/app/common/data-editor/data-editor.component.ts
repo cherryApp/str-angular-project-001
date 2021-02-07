@@ -38,14 +38,12 @@ export class DataEditorComponent implements OnInit {
     this.productService.update(product).subscribe(
       () => location.reload()
     );
-
   }
 
   onDelete(product: Product) : void {
     this.productService.remove(product).subscribe(
       () => location.reload()
     );
-
   }
 
   // onPhrase(event: Event): void {
