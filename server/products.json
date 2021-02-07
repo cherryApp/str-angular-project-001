@@ -1,39 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "catId": 1,
-      "name": "Muffin Mix - Blueberry",
-      "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-      "image": "/assets/img/products/img01.jpg",
-      "price": 35.99,
-      "stock": 70,
-      "featured": false,
-      "active": true
-    },
-    {
-      "id": 2,
-      "catId": 1,
-      "name": "Fiddlehead - Frozen",
-      "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
-      "image": "/assets/img/products/img02.jpg",
-      "price": 40.99,
-      "stock": 68,
-      "featured": true,
-      "active": true
-    },
-    {
-      "id": 3,
-      "catId": 1,
-      "name": "Muffin Mix - Blueberry",
-      "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-      "image": "/assets/img/products/img03.jpg",
-      "price": 35.99,
-      "stock": 70,
-      "featured": false,
-      "active": true
-    },
-    {
       "id": 4,
       "catId": 1,
       "name": "Cookie Dough - Chunky",

@@ -19,7 +19,7 @@ export class ProductService {
     ------------- MÁSODIK FELVONÁS METÓDUSAI -------------
   */
 
-    getAll(): Observable<Product[]> {
+      getAll(): Observable<Product[]> {
 	    return this.http.get<Product[]>(this.apiUrl);
 	  }
 

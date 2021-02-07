@@ -30,6 +30,7 @@ export class AdminComponent implements OnInit {
       this.phraseString = (event.target as HTMLInputElement).value;
     }
   
+    onUpdate($event)
     onUpdate(product: Product): void {
       this.productService.update(product).subscribe(
         updatedProduct => console.log(updatedProduct)
@@ -40,5 +41,6 @@ export class AdminComponent implements OnInit {
       this.productService.remove(product).subscribe(
         () => console.log('deleted')
       );
+      location.reload();
     }
   }
