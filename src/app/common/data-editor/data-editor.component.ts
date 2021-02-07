@@ -13,7 +13,7 @@ import {FilterPipe} from 'src/app/pipe/filter.pipe';
 })
 export class DataEditorComponent implements OnInit {
 
-  
+
   productList$: Observable<Product[]> = this.productService.getAll();
   cols: ITableCol[] = this.config.tableCols;
 
