@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './service/product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'str-angular-project001';
+
+  constructor(
+    private pservice: ProductService
+  ) {
+    this.pservice.getAll().forEach(
+      value => {
+        console.log("All Product: " , value);
+      }
+    )
+  }
 }
+
